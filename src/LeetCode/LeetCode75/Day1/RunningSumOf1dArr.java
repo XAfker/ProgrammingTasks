@@ -7,8 +7,8 @@ public class RunningSumOf1dArr {
     public static int[] runningSum(int[] nums) {
         int sum = 0;
         int[] res = new int[nums.length];
-        for(int i = 0; i < nums.length; i++){
-            sum+=nums[i];
+        for (int i = 0; i < nums.length; i++) {
+            sum += nums[i];
             res[i] = sum;
         }
         return res;
