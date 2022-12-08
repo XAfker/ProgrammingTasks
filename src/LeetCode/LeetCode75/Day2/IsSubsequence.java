@@ -6,7 +6,7 @@ public class IsSubsequence {
     public static void main(String[] args) {
 
     }
-    public boolean isSubsequence(String s, String t) {
+    public static boolean isSubsequence(String s, String t) {
         if(s.length() == 0)
             return true;
 
