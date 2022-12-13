@@ -5,15 +5,16 @@ public class BestTimeToBuy {
 
     }
     public int maxProfit(int[] prices) {
-        int buy, sell;
+        int buy, tmpSell, sell;
         buy = prices[0];
         sell = 0;
-        for(int i = 0, j = 1; j<prices.length; i++, j++){
+        for(int i = 0; i<prices.length; i++){
             if (prices[i]<buy)
                 buy = prices[i];
-            if(prices[j]>sell)
-                sell = prices[j];
+            tmpSell = prices[i] - buy;
+            if(sell<tmpSell)
+                sell = tmpSell;
         }
-        return sell - buy;
+        return sell;
     }
 }
