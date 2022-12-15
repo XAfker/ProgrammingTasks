@@ -4,7 +4,7 @@ public class LongestPalindrome {
     public static void main(String[] args) {
     }
 
-    public int longestPalindrome(String s) {
+    static int longestPalindrome(String s) {
         int[] count = new int['z' - 'A' + 1];
         int res = 0;
         boolean odd = false;
@@ -12,6 +12,7 @@ public class LongestPalindrome {
         for(int i = 0; i < s.length(); i++){
             count[s.charAt(i)-'A']++;
         }
+        System.out.println();
         for(int i = 0; i < count.length; i++){
             res += count[i];
             if(count[i]%2 != 0) {
